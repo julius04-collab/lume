@@ -217,10 +217,8 @@ a:hover { color: #3E4A33; }
 .pbtn { height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: #FBF6EC; color: #2A3324; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
 .pbtn:hover { background: #FFFFFF; }
 .pbtn s { color: #6B6B63; font-weight: 500; }
-.trio { display: flex; align-items: flex-end; justify-content: center; gap: 4%; height: 340px; }
-.trio svg { height: 100%; width: auto; overflow: visible; }
-.trio .t-c { height: 94%; }
-.trio .t-j { height: 50%; }
+.trio { display: grid; grid-template-columns: 101fr 126fr 131fr; align-items: end; column-gap: 7%; width: 100%; max-width: 440px; margin: 0 auto; padding: 0 4px; }
+.trio svg { display: block; width: 100%; height: auto; overflow: visible; }
 .pdisc { position: absolute; top: 28px; right: 28px; width: 104px; height: 104px; border-radius: 50%; background: #2A3324; color: #F4EFE5; display: grid; place-items: center; text-align: center; font-size: 22px; line-height: 1; transform: rotate(-10deg); }
 
 /* ---------- CONCERN FINDER ---------- */
@@ -354,7 +352,7 @@ a:hover { color: #3E4A33; }
   .cta { padding: 90px 0 72px; }
   .promo, .concern, .spot, .routine, .jgrid, .faqwrap { grid-template-columns: minmax(0, 1fr); }
   .promo { margin-top: 80px; border-radius: 24px; }
-  .trio { height: 240px; }
+  .trio { max-width: 340px; }
   .pdisc { width: 80px; height: 80px; font-size: 17px; top: 16px; right: 16px; }
   .ctab .cn { font-size: 24px; }
   .cpanel { min-height: 0; }
