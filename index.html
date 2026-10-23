@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumé — Botanical skincare</title>
+<meta name="description" content="Lumé — fragrance-free botanical skincare built on clinically studied actives, in amber glass.">
+<meta name="theme-color" content="#2A3324">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+.mm[hidden], [hidden] { display: none !important; }
+span[data-prod] { display: contents; }
+body { margin: 0; background: #E9E5DC; }
+a { color: #1C1F1A; text-decoration: none; }
+a:hover { color: #3E4A33; }
+.lm { font-family: 'Inter Tight', system-ui, -apple-system, sans-serif; color: #1C1F1A; background: #E9E5DC; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.lm * { box-sizing: border-box; }
+.serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- HERO STAGE ---------- */
+.herowrap { min-height: clamp(680px, 100vh, 920px); }
+.stage { position: relative; height: clamp(680px, 100vh, 920px); padding: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; overflow: hidden; isolation: isolate; }
+.panel { position: relative; z-index: 1; background: #FBFAF7; border-radius: 28px; padding: 28px 34px 34px; display: flex; flex-direction: column; min-width: 0; }
+.row { display: flex; align-items: center; gap: 30px; }
+.row.end { justify-content: flex-end; gap: 8px; }
+.grow { flex: 1; }
+.logo { font-size: 34px; line-height: 1; letter-spacing: -0.01em; }
+.nav { display: flex; gap: 26px; font-size: 13px; font-weight: 500; }
+.nav a { color: #4A4A44; }
+.nav a:hover { color: #1C1F1A; }
+.menu { display: none; }
+.eyebrow { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6B63; }
+.inside { margin-top: 48px; display: flex; flex-direction: column; gap: 12px; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.chips li { font-size: 13px; padding: 8px 14px; border-radius: 999px; background: #EFECE4; color: #2A3324; }
+.h1 { margin: 14px 0 28px; font-size: clamp(42px, 4.6vw, 72px); line-height: 0.98; letter-spacing: -0.015em; max-width: 560px; }
+.ln { display: block; overflow: hidden; padding-bottom: 0.08em; }
+.rise { display: inline-block; }
+.it { font-style: italic; color: #7D7A70; }
+.ctas { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.pill { display: inline-flex; align-items: center; gap: 18px; height: 56px; padding: 0 6px 0 26px; border-radius: 999px; background: #2A3324; color: #F4EFE5; font-size: 14px; font-weight: 500; }
+.pill:hover { color: #F4EFE5; background: #1E2619; }
+.arrow { width: 44px; height: 44px; border-radius: 50%; background: #F4EFE5; color: #2A3324; display: grid; place-items: center; }
+.ghost { font-size: 14px; font-weight: 500; border-bottom: 1px solid #1C1F1A; padding: 12px 0 2px; }
+.search { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px 0 18px; border-radius: 999px; background: #F1EEE7; width: 240px; color: #4A4A44; }
+.search input { border: 0; background: transparent; outline: none; font: inherit; font-size: 13px; flex: 1; min-width: 0; color: #1C1F1A; }
+.search input::placeholder { color: #6B6B63; }
+.ib { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #F1EEE7; color: #1C1F1A; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.ib:hover { background: #E6E2D8; }
+.cards { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+.pcard { width: 272px; display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 14px; border-radius: 20px; background: #F1EEE7; }
+.pimg { width: 56px; height: 76px; display: flex; align-items: center; justify-content: center; flex: none; }
+.pimg svg { height: 100%; width: auto; max-width: 100%; }
+.pmeta { flex: 1; min-width: 0; }
+.pname { margin: 0; font-size: 14px; font-weight: 600; }
+.psub { margin: 3px 0 0; font-size: 12px; color: #6B6B63; }
+.plus { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #2A3324; color: #F4EFE5; display: grid; place-items: center; cursor: pointer; flex: none; padding: 0; }
+.plus:hover { background: #1E2619; }
+.blurb { align-self: flex-end; max-width: 360px; display: flex; flex-direction: column; gap: 12px; }
+.lead { margin: 0; font-size: 17px; line-height: 1.45; color: #2B2D28; }
+.replay { align-self: flex-start; border: 0; background: none; padding: 0; min-height: 44px; font: inherit; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #3E4A33; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+
+/* center: halo, ring, bottle */
+.fx { position: absolute; left: 50%; top: 50%; width: clamp(300px, 36vw, 560px); height: clamp(300px, 36vw, 560px); transform: translate(-50%, -50%); z-index: 2; pointer-events: none; }
+.halo { position: absolute; inset: 13%; border-radius: 50%; background: #EEEEE4; }
+.ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+.center { position: absolute; left: 50%; top: 50%; z-index: 6; width: clamp(170px, 19vw, 280px); transform: translate(-50%, -50%); pointer-events: none; }
+.tag { position: absolute; z-index: 6; display: flex; align-items: center; gap: 8px; padding: 10px 15px; border-radius: 999px; background: #FBFAF7; box-shadow: 0 8px 28px rgba(42, 51, 36, 0.10); font-size: 12px; font-weight: 500; color: #2A3324; white-space: nowrap; pointer-events: none; }
+.tag i { width: 7px; height: 7px; border-radius: 50%; background: #B8742F; display: block; }
+.t1 { left: calc(50% + clamp(100px, 11vw, 165px)); top: 57%; }
+.t2 { right: calc(50% + clamp(100px, 11vw, 165px)); top: 31%; }
+
+/* splash */
+.splash { position: absolute; inset: 0; z-index: 4; display: flex; pointer-events: none; }
+.half { flex: 1; background: #2A3324; }
+.word { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; pointer-events: none; color: #E9E3D4; font-size: clamp(120px, 24vw, 380px); line-height: 1; }
+.splashfoot { position: absolute; left: 0; right: 0; bottom: 40px; z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 14px; pointer-events: none; color: #C9C3B3; }
+.splashfoot p { margin: 0; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; }
+.bar { width: 140px; height: 1px; background: rgba(233, 227, 212, 0.25); overflow: hidden; }
+.bar span { display: block; height: 100%; background: #E9E3D4; transform-origin: left center; }
+
+/* ---------- MOTION TIMELINE ---------- */
+.word { animation: lmWord 1.1s 0.1s cubic-bezier(.2,.7,.2,1) both, lmOut 0.4s 1.45s ease forwards; }
+.splashfoot { animation: lmOut 0.4s 1.45s ease forwards; }
+.bar span { animation: lmLoad 1.3s 0.15s cubic-bezier(.6,0,.3,1) both; }
+.half.l { animation: lmSplitL 1.05s 1.65s cubic-bezier(.77,0,.18,1) forwards; }
+.half.r { animation: lmSplitR 1.05s 1.65s cubic-bezier(.77,0,.18,1) forwards; }
+.b-settle { animation: lmSettle 1.05s 1.62s cubic-bezier(.77,0,.18,1) both; }
+.b-in { animation: lmBottleIn 1s 0.15s cubic-bezier(.2,.8,.2,1) both; }
+.b-float { animation: lmFloat 6s 2.8s ease-in-out infinite; }
+.sweep { animation: lmSweep 6s 3s ease-in-out infinite; }
+.fx { animation: lmFade 1.2s 2.15s ease both; }
+.ring { animation: lmSpin 60s linear infinite; }
+.tag { animation: lmFadeUp 0.8s 2.95s cubic-bezier(.2,.7,.2,1) both; }
+.t2 { animation-delay: 3.1s; }
+.rv { animation: lmFadeUp 0.9s cubic-bezier(.2,.7,.2,1) both; }
+.d1 { animation-delay: 2.25s; }
+.d2 { animation-delay: 2.4s; }
+.d3 { animation-delay: 2.5s; }
+.d4 { animation-delay: 2.62s; }
+.d5 { animation-delay: 2.78s; }
+.rise { animation: lmRise 1s cubic-bezier(.2,.7,.2,1) both; }
+.r1 { animation-delay: 2.38s; }
+.r2 { animation-delay: 2.48s; }
+.r3 { animation-delay: 2.58s; }
+
+@keyframes lmWord {
+  from { opacity: 0; letter-spacing: 0.22em; }
+  to { opacity: 1; letter-spacing: -0.02em; }
+}
+@keyframes lmOut {
+  to { opacity: 0; transform: translateY(-14px); }
+}
+@keyframes lmLoad {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes lmSplitL {
+  to { transform: translateX(-101%); }
+}
+@keyframes lmSplitR {
+  to { transform: translateX(101%); }
+}
+@keyframes lmBottleIn {
+  from { opacity: 0; transform: translateY(90px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes lmSettle {
+  from { transform: scale(1.28); }
+  to { transform: scale(1); }
+}
+@keyframes lmFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+@keyframes lmSweep {
+  0% { transform: translateX(0); }
+  45% { transform: translateX(320px); }
+  100% { transform: translateX(320px); }
+}
+@keyframes lmFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lmSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes lmFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes lmRise {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+@keyframes lmMarquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- SECTIONS ---------- */
+.marquee { overflow: hidden; padding: 26px 0; border-top: 1px solid #D6D0C3; border-bottom: 1px solid #D6D0C3; margin-top: 64px; }
+.track { display: flex; width: max-content; animation: lmMarquee 40s linear infinite; }
+.track span { font-size: clamp(28px, 3.4vw, 46px); padding: 0 26px; white-space: nowrap; line-height: 1.1; }
+.track b { font-weight: 400; color: #A0652A; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.sec { padding-top: 110px; }
+.sechead { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 44px; }
+.h2 { margin: 12px 0 0; font-size: clamp(38px, 4.4vw, 64px); line-height: 1; letter-spacing: -0.01em; max-width: 680px; }
+.sectext { margin: 0; max-width: 380px; font-size: 16px; line-height: 1.55; color: #4A4A44; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.rcard { background: #FBFAF7; border-radius: 28px; padding: 12px 12px 24px; display: flex; flex-direction: column; }
+.rimg { height: 340px; border-radius: 20px; background: #EEEBE3; display: flex; align-items: center; justify-content: center; padding: 34px; }
+.rimg svg { height: 100%; width: auto; max-width: 100%; }
+.rbody { padding: 22px 14px 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.step { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #8A5A26; }
+.rname { margin: 0; font-size: 34px; line-height: 1.05; }
+.rdesc { margin: 0; font-size: 15px; line-height: 1.5; color: #4A4A44; }
+.acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.acts span { font-size: 12px; padding: 6px 11px; border-radius: 999px; border: 1px solid #D6D0C3; color: #2A3324; }
+.rfoot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 20px; }
+.price { font-size: 15px; font-weight: 600; color: #4A4A44; }
+.add { height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: #2A3324; color: #F4EFE5; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+.add:hover { background: #1E2619; }
+.sci { margin-top: 110px; background: #2A3324; color: #EDE8DC; border-radius: 32px; padding: clamp(36px, 6vw, 84px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; }
+.sci .eyebrow { color: #B9B39F; }
+.sci .h2 { color: #F4EFE5; }
+.sci .sectext { color: #C9C3B3; margin-top: 22px; }
+.princ { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 28px; align-content: start; }
+.pitem { border-top: 1px solid rgba(237, 232, 220, 0.2); padding-top: 18px; }
+.pnum { margin: 0; font-size: 12px; color: #D9A866; letter-spacing: 0.1em; }
+.ptitle { margin: 10px 0 6px; font-size: 26px; color: #F4EFE5; line-height: 1.1; }
+.pdesc { margin: 0; font-size: 14px; line-height: 1.5; color: #C9C3B3; }
+.cta { padding: 120px 0 96px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.form { display: flex; gap: 8px; margin-top: 16px; width: 100%; max-width: 470px; flex-wrap: wrap; }
+.form input { flex: 1 1 220px; min-width: 0; height: 52px; border-radius: 999px; border: 1px solid #CFC9BC; background: #FBFAF7; padding: 0 22px; font: inherit; font-size: 14px; color: #1C1F1A; }
+.form button { flex: none; height: 52px; padding: 0 26px; border-radius: 999px; border: 0; background: #2A3324; color: #F4EFE5; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; }
+.foot { border-top: 1px solid #D6D0C3; padding: 28px 0 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 13px; color: #4A4A44; }
+.foot nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.foot a { color: #4A4A44; }
+
+/* ---------- TOP BAR + BAG ---------- */
+.topbar { background: #2A3324; color: #E9E3D4; font-size: 12px; letter-spacing: 0.04em; text-align: center; padding: 11px 16px; line-height: 1.4; }
+.topbar b { color: #F4EFE5; font-weight: 600; }
+.ib { position: relative; }
+.badge { position: absolute; top: -3px; right: -3px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: #8A5420; color: #FBF6EC; font-size: 10px; font-weight: 600; display: grid; place-items: center; }
+
+/* ---------- PROMO ---------- */
+.promo { margin-top: 110px; border-radius: 32px; background: #8A5420; color: #FBF6EC; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 32px; padding: clamp(32px, 5vw, 72px); overflow: hidden; position: relative; }
+.promo .eyebrow { color: #F6E3C6; }
+.promo .h2 { color: #FBF6EC; }
+.promo .sectext { color: #F6E9D6; margin-top: 18px; }
+.prow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.code { display: inline-flex; align-items: center; height: 52px; padding: 0 20px; border: 1px dashed rgba(251, 246, 236, 0.65); border-radius: 999px; font-size: 13px; letter-spacing: 0.1em; font-weight: 600; }
+.pbtn { height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: #FBF6EC; color: #2A3324; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
+.pbtn:hover { background: #FFFFFF; }
+.pbtn s { color: #6B6B63; font-weight: 500; }
+.trio { display: flex; align-items: flex-end; justify-content: center; gap: 4%; height: 340px; }
+.trio svg { height: 100%; width: auto; overflow: visible; }
+.trio .t-c { height: 94%; }
+.trio .t-j { height: 50%; }
+.pdisc { position: absolute; top: 28px; right: 28px; width: 104px; height: 104px; border-radius: 50%; background: #2A3324; color: #F4EFE5; display: grid; place-items: center; text-align: center; font-size: 22px; line-height: 1; transform: rotate(-10deg); }
+
+/* ---------- CONCERN FINDER ---------- */
+.concern { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 14px; }
+.ctabs { display: flex; flex-direction: column; gap: 8px; }
+.ctab { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 78px; padding: 12px 26px; border-radius: 22px; border: 1px solid #D6D0C3; background: transparent; font: inherit; text-align: left; cursor: pointer; color: #1C1F1A; }
+.ctab:hover { border-color: #2A3324; }
+.ctab .cn { font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.05; }
+.ctab .cs { font-size: 13px; color: #6B6B63; text-align: right; }
+.ctab.on { background: #2A3324; border-color: #2A3324; color: #F4EFE5; }
+.ctab.on .cs { color: #C9C3B3; }
+.cpanel { background: #FBFAF7; border-radius: 28px; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 16px; min-height: 380px; }
+.ctitle { margin: 0; font-size: clamp(34px, 3.4vw, 48px); line-height: 1.05; }
+.cpick { margin-top: auto; display: flex; align-items: center; gap: 18px; padding: 14px 14px 14px 18px; border-radius: 22px; background: #F1EEE7; }
+.cpick .pimg { width: 60px; height: 84px; }
+
+/* ---------- SPOTLIGHT ---------- */
+.spot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.svis { position: relative; background: #DCDFCF; border-radius: 28px; min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.svis .disc { position: absolute; width: min(56%, 300px); aspect-ratio: 1; border-radius: 50%; background: #E8EADE; }
+.svis .sb { position: relative; height: min(62%, 300px); width: auto; overflow: visible; }
+.callout { position: absolute; background: #FBFAF7; border-radius: 14px; padding: 12px 16px; font-size: 13px; color: #2A3324; box-shadow: 0 8px 24px rgba(42, 51, 36, 0.10); }
+.callout b { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; display: block; line-height: 1; margin-bottom: 2px; }
+.co1 { top: 16%; left: 8%; }
+.co2 { bottom: 18%; right: 8%; }
+.stext { background: #FBFAF7; border-radius: 28px; padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; }
+.blist { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; }
+.blist li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-top: 1px solid #E3DED3; }
+.bico { width: 44px; height: 44px; border-radius: 50%; background: #EEEBE3; display: grid; place-items: center; color: #2A3324; }
+.bt { margin: 0; font-size: 16px; font-weight: 600; }
+.bd { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #4A4A44; }
+
+/* ---------- ROUTINE ---------- */
+.routine { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.rcol { border-radius: 28px; padding: clamp(28px, 4vw, 52px); }
+.am { background: #FBFAF7; }
+.pm { background: #1C1F1A; color: #EDE8DC; }
+.rhead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.rlabel { margin: 0; font-size: 44px; line-height: 1; }
+.rtime { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B63; }
+.pm .rtime { color: #B9B39F; }
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; padding: 18px 0; border-top: 1px solid #E3DED3; }
+.pm .steps li { border-top-color: rgba(237, 232, 220, 0.16); }
+.sn { font-size: 13px; color: #8A5A26; font-weight: 600; }
+.pm .sn { color: #D9A866; }
+.sname { margin: 0; font-size: 17px; font-weight: 600; }
+.sdesc { margin: 4px 0 0; font-size: 14px; color: #4A4A44; line-height: 1.45; }
+.pm .sdesc { color: #C9C3B3; }
+.stime { font-size: 12px; color: #6B6B63; white-space: nowrap; }
+.pm .stime { color: #B9B39F; }
+
+/* ---------- JOURNAL ---------- */
+.jgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.jcard { display: flex; flex-direction: column; gap: 12px; color: #1C1F1A; }
+.jcard:hover { color: #1C1F1A; }
+.jimg { height: 280px; border-radius: 24px; display: flex; align-items: flex-end; justify-content: flex-start; padding: 22px 26px; overflow: hidden; margin-bottom: 6px; }
+.j1 { background: #DCDFCF; }
+.j2 { background: #E7D6BE; }
+.j3 { background: #2A3324; }
+.jimg .big { font-size: 150px; line-height: 0.8; color: rgba(28, 31, 26, 0.18); }
+.j3 .big { color: rgba(244, 239, 229, 0.22); }
+.jmeta { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B6B63; }
+.jtitle { margin: 0; font-size: 28px; line-height: 1.1; }
+.jcard:hover .jtitle { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+
+/* ---------- FAQ ---------- */
+.faqwrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 48px; }
+.faq { border-top: 1px solid #D6D0C3; }
+.faq:last-child { border-bottom: 1px solid #D6D0C3; }
+.fq { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 76px; padding: 18px 0; border: 0; background: none; font: inherit; font-size: 18px; font-weight: 500; text-align: left; color: #1C1F1A; cursor: pointer; }
+.fi { font-size: 26px; color: #8A5A26; flex: none; width: 28px; text-align: center; font-weight: 400; }
+.fa { margin: 0 0 24px; max-width: 640px; font-size: 15px; line-height: 1.6; color: #4A4A44; }
+
+/* ---------- FOOTER ---------- */
+.bigfoot { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 32px; padding: 64px 0 24px; border-top: 1px solid #D6D0C3; }
+.fbrand p { margin: 14px 0 0; max-width: 320px; font-size: 14px; line-height: 1.55; color: #4A4A44; }
+.fcol h3 { margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B63; }
+.fcol ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
+.fcol a { color: #2B2D28; }
+.flogo { margin: 24px 0 0; font-size: clamp(96px, 20vw, 290px); line-height: 0.82; color: #2A3324; text-align: center; letter-spacing: -0.03em; }
+
+/* ---------- MOBILE MENU ---------- */
+.mm { position: fixed; inset: 0; z-index: 100; background: #2A3324; color: #F4EFE5; display: flex; flex-direction: column; padding: 20px 24px 28px; overflow-y: auto; animation: lmMenuIn 0.5s cubic-bezier(.77,0,.18,1) both; }
+.mm-top { display: flex; align-items: center; justify-content: space-between; }
+.mm-x { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(244, 239, 229, 0.3); background: transparent; color: #F4EFE5; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.mm-nav { display: flex; flex-direction: column; margin-top: 36px; }
+.mm-nav a { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(244, 239, 229, 0.14); color: #F4EFE5; font-size: 34px; line-height: 1.1; animation: lmFadeUp 0.6s cubic-bezier(.2,.7,.2,1) both; }
+.mm-nav a:hover { color: #D9A866; }
+.mm-nav a span { font-family: 'Inter Tight', sans-serif; font-size: 12px; color: #B9B39F; letter-spacing: 0.1em; }
+.mm-nav a:nth-child(1) { animation-delay: 0.2s; }
+.mm-nav a:nth-child(2) { animation-delay: 0.25s; }
+.mm-nav a:nth-child(3) { animation-delay: 0.3s; }
+.mm-nav a:nth-child(4) { animation-delay: 0.35s; }
+.mm-nav a:nth-child(5) { animation-delay: 0.4s; }
+.mm-nav a:nth-child(6) { animation-delay: 0.45s; }
+.mm-nav a:nth-child(7) { animation-delay: 0.5s; }
+.mm-foot { margin-top: auto; padding-top: 32px; display: flex; flex-direction: column; gap: 14px; animation: lmFade 0.6s 0.55s ease both; }
+.mm-cta { display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #F4EFE5; color: #2A3324; font-size: 15px; font-weight: 600; }
+.mm-cta:hover { color: #2A3324; background: #FFFFFF; }
+.mm-foot p { margin: 0; text-align: center; font-size: 12px; color: #B9B39F; letter-spacing: 0.04em; }
+@keyframes lmMenuIn {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .t1, .t2 { display: none; }
+  .search { width: 190px; }
+  .nav { gap: 18px; }
+}
+@media (max-width: 860px) {
+  .herowrap { min-height: 0; }
+  .stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); height: auto; padding: 8px; gap: 8px; }
+  .panel { padding: 20px 20px 24px; border-radius: 24px; }
+  .pl { padding-bottom: 170px; }
+  .pr { padding-top: 190px; }
+  .nav, .inside, .pr > .row { display: none; }
+  .menu { display: flex; gap: 8px; margin-left: auto; }
+  .h1 { font-size: 46px; margin-top: 12px; }
+  .cards { margin-top: 0; align-items: stretch; }
+  .pcard { width: 100%; }
+  .blurb { align-self: stretch; max-width: none; margin-top: 26px; }
+  .center { width: 140px; }
+  .fx { width: 310px; height: 310px; }
+  .grid3, .sci, .princ { grid-template-columns: minmax(0, 1fr); }
+  .rimg { height: 280px; }
+  .sec { padding-top: 80px; }
+  .sci { margin-top: 80px; border-radius: 24px; gap: 40px; }
+  .cta { padding: 90px 0 72px; }
+  .promo, .concern, .spot, .routine, .jgrid, .faqwrap { grid-template-columns: minmax(0, 1fr); }
+  .promo { margin-top: 80px; border-radius: 24px; }
+  .trio { height: 240px; }
+  .pdisc { width: 80px; height: 80px; font-size: 17px; top: 16px; right: 16px; }
+  .ctab .cn { font-size: 24px; }
+  .cpanel { min-height: 0; }
+  .svis { min-height: 340px; }
+  .faqwrap { gap: 24px; }
+  .jimg { height: 220px; }
+  .bigfoot { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fbrand { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .splash, .word, .splashfoot { display: none; }
+  .lm * { animation: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="lm">
+
+<div class="mm" id="lm-menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+<div class="mm-top">
+<a href="#" class="serif" style="font-size: 32px; color: #F4EFE5" data-close>Lumé</a>
+<button class="mm-x" aria-label="Close menu" data-close><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
+</div>
+<nav class="mm-nav" aria-label="Mobile">
+<a href="#ritual" class="serif" data-close><span>01</span>Shop</a>
+<a href="#set" class="serif" data-close><span>02</span>The Ritual Set</a>
+<a href="#concern" class="serif" data-close><span>03</span>Shop by concern</a>
+<a href="#science" class="serif" data-close><span>04</span>Science</a>
+<a href="#routine" class="serif" data-close><span>05</span>How to use</a>
+<a href="#journal" class="serif" data-close><span>06</span>Journal</a>
+<a href="#faq" class="serif" data-close><span>07</span>FAQ</a>
+</nav>
+<div class="mm-foot">
+<a class="mm-cta" href="#set" data-close>Shop the set — $79.90</a>
+<p>Free shipping over $60 · Code RITUAL15</p>
+</div>
+</div>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position: absolute">
+<defs>
+<linearGradient id="lmAmber" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#3F1D07"></stop>
+<stop offset="0.16" stop-color="#874915"></stop>
+<stop offset="0.36" stop-color="#CB8C42"></stop>
+<stop offset="0.52" stop-color="#A9651F"></stop>
+<stop offset="0.82" stop-color="#6A360F"></stop>
+<stop offset="1" stop-color="#341705"></stop>
+</linearGradient>
+<linearGradient id="lmGreen" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#141C0E"></stop>
+<stop offset="0.16" stop-color="#31432A"></stop>
+<stop offset="0.36" stop-color="#7A8F69"></stop>
+<stop offset="0.52" stop-color="#4A5E3C"></stop>
+<stop offset="0.82" stop-color="#25331C"></stop>
+<stop offset="1" stop-color="#10170A"></stop>
+</linearGradient>
+<linearGradient id="lmCap" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#0C0E0A"></stop>
+<stop offset="0.32" stop-color="#3D4038"></stop>
+<stop offset="0.6" stop-color="#1A1C17"></stop>
+<stop offset="1" stop-color="#060705"></stop>
+</linearGradient>
+<linearGradient id="lmOlive" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#1A2115"></stop>
+<stop offset="0.32" stop-color="#56664A"></stop>
+<stop offset="0.6" stop-color="#2A3324"></stop>
+<stop offset="1" stop-color="#11160D"></stop>
+</linearGradient>
+<linearGradient id="lmFrost" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FFFFFF" stop-opacity="0.24"></stop>
+<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.05"></stop>
+<stop offset="1" stop-color="#000000" stop-opacity="0.2"></stop>
+</linearGradient>
+<linearGradient id="lmSweep" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"></stop>
+<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.38"></stop>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"></stop>
+</linearGradient>
+<radialGradient id="lmShadow" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#1C1F1A" stop-opacity="0.34"></stop>
+<stop offset="1" stop-color="#1C1F1A" stop-opacity="0"></stop>
+</radialGradient>
+<symbol id="lmSerumS" viewBox="0 0 200 380">
+<ellipse cx="100" cy="368" rx="80" ry="10" fill="url(#lmShadow)"></ellipse>
+<path d="M82 64 C82 22 90 6 100 6 C110 6 118 22 118 64 Z" fill="url(#lmCap)"></path>
+<rect x="64" y="58" width="72" height="52" rx="8" fill="url(#lmCap)"></rect>
+<rect x="80" y="108" width="40" height="22" fill="#4F2709"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmAmber)"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmFrost)"></rect>
+<rect x="40" y="146" width="9" height="196" rx="4.5" fill="#FFFFFF" opacity="0.26"></rect>
+<rect x="52" y="208" width="96" height="122" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="100" y="241" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="25" fill="#1C1F1A">Lumé</text>
+<rect x="88" y="251" width="24" height="0.8" fill="#1C1F1A"></rect>
+<text x="100" y="273" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">CLARIFYING</text>
+<text x="100" y="285" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">SERUM</text>
+<text x="100" y="315" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6.5" letter-spacing="1" fill="#5D5B54">NIACINAMIDE 10% · 30 ML</text>
+</symbol>
+<symbol id="lmJarS" viewBox="0 0 240 220">
+<ellipse cx="120" cy="210" rx="104" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="38" y="16" width="164" height="56" rx="10" fill="url(#lmOlive)"></rect>
+<rect x="38" y="30" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="38" y="44" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="38" y="58" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="54" y="70" width="132" height="14" fill="#4F2709"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmAmber)"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmFrost)"></rect>
+<rect x="36" y="96" width="9" height="94" rx="4.5" fill="#FFFFFF" opacity="0.26"></rect>
+<rect x="66" y="108" width="108" height="72" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="120" y="134" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="21" fill="#1C1F1A">Lumé</text>
+<text x="120" y="152" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.4" fill="#2A3324">BARRIER CREAM</text>
+<text x="120" y="168" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6" letter-spacing="0.8" fill="#5D5B54">CERAMIDES · 50 ML</text>
+</symbol>
+<symbol id="lmCleanS" viewBox="0 0 180 400">
+<ellipse cx="94" cy="390" rx="74" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="66" y="14" width="56" height="24" rx="5" fill="url(#lmCap)"></rect>
+<rect x="118" y="20" width="44" height="11" rx="4" fill="url(#lmCap)"></rect>
+<rect x="84" y="36" width="20" height="30" fill="#1A1C17"></rect>
+<rect x="54" y="62" width="80" height="44" rx="8" fill="url(#lmCap)"></rect>
+<rect x="68" y="104" width="52" height="24" fill="#1F2A19"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmGreen)"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmFrost)"></rect>
+<rect x="32" y="146" width="9" height="212" rx="4.5" fill="#FFFFFF" opacity="0.22"></rect>
+<rect x="40" y="226" width="108" height="124" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="94" y="259" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="25" fill="#1C1F1A">Lumé</text>
+<rect x="82" y="269" width="24" height="0.8" fill="#1C1F1A"></rect>
+<text x="94" y="291" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">GEL</text>
+<text x="94" y="303" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">CLEANSER</text>
+<text x="94" y="333" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6.5" letter-spacing="1" fill="#5D5B54">CENTELLA · 150 ML</text>
+</symbol>
+<clipPath id="lmClipS">
+<rect x="28" y="128" width="144" height="232" rx="30"></rect>
+</clipPath>
+</defs>
+</svg>
+
+<div class="topbar"><span class="rv d1" style="display: inline-block">Free shipping on orders over <b>$60</b> · Save 15% on The Complete Ritual with code <b>RITUAL15</b></span></div>
+
+<div class="herowrap">
+<div class="stage" id="lm-stage">
+
+<section class="panel pl" aria-label="Lumé introduction">
+<header class="row rv d1">
+<a href="#" class="logo serif">Lumé</a>
+<nav class="nav" aria-label="Main">
+<a href="#ritual">Shop</a>
+<a href="#ritual">The Ritual</a>
+<a href="#science">Science</a>
+<a href="#journal">Journal</a>
+</nav>
+<div class="menu">
+<button class="ib" aria-label="Bag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span class="badge" data-badge hidden>0</span></button>
+<button class="ib" aria-label="Open menu" aria-expanded="false" data-menu><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16"></path><path d="M4 15h16"></path></svg></button>
+</div>
+</header>
+<div class="inside rv d2">
+<p class="eyebrow">Inside the bottle</p>
+<ul class="chips">
+<li>Niacinamide 10%</li>
+<li>Zinc PCA 1%</li>
+<li>Green tea leaf extract</li>
+</ul>
+</div>
+<div class="grow"></div>
+<p class="eyebrow rv d3">New — Clarifying Serum</p>
+<h1 class="serif h1">
+<span class="ln"><span class="rise r1">Clarity, drawn</span></span>
+<span class="ln"><span class="rise r2 it">from nature,</span></span>
+<span class="ln"><span class="rise r3">proven by science.</span></span>
+</h1>
+<div class="ctas rv d5">
+<a class="pill" href="#ritual">Shop the ritual <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+<a class="ghost" href="#science">Our science</a>
+</div>
+</section>
+
+<section class="panel pr" aria-label="Featured products">
+<div class="row end rv d1">
+<label class="search"><span class="sr">Search</span><input type="search" placeholder="Search formulas"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></label>
+<button class="ib" aria-label="Account"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></button>
+<button class="ib" aria-label="Bag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span class="badge" data-badge hidden>0</span></button>
+</div>
+
+<div class="cards">
+<article class="pcard rv d3">
+<div class="pimg">
+<svg viewBox="0 0 240 220" aria-hidden="true">
+<ellipse cx="120" cy="210" rx="104" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="38" y="16" width="164" height="56" rx="10" fill="url(#lmOlive)"></rect>
+<rect x="54" y="70" width="132" height="14" fill="#4F2709"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmAmber)"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmFrost)"></rect>
+<rect x="66" y="108" width="108" height="72" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="120" y="140" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="24" fill="#1C1F1A">Lumé</text>
+</svg>
+</div>
+<div class="pmeta">
+<p class="pname">Barrier Cream</p>
+<p class="psub">Ceramides · 50 ml · $38</p>
+</div>
+<button class="plus" aria-label="Add Barrier Cream to bag" data-add="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></button>
+</article>
+<article class="pcard rv d4">
+<div class="pimg">
+<svg viewBox="0 0 180 400" aria-hidden="true">
+<ellipse cx="94" cy="390" rx="74" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="66" y="14" width="56" height="24" rx="5" fill="url(#lmCap)"></rect>
+<rect x="118" y="20" width="44" height="11" rx="4" fill="url(#lmCap)"></rect>
+<rect x="84" y="36" width="20" height="30" fill="#1A1C17"></rect>
+<rect x="54" y="62" width="80" height="44" rx="8" fill="url(#lmCap)"></rect>
+<rect x="68" y="104" width="52" height="24" fill="#1F2A19"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmGreen)"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmFrost)"></rect>
+<rect x="40" y="226" width="108" height="124" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+</svg>
+</div>
+<div class="pmeta">
+<p class="pname">Gel Cleanser</p>
+<p class="psub">Centella · 150 ml · $22</p>
+</div>
+<button class="plus" aria-label="Add Gel Cleanser to bag" data-add="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></button>
+</article>
+</div>
+
+<div class="grow"></div>
+<div class="blurb rv d5">
+<p class="eyebrow">Precision botanicals</p>
+<p class="lead">Fragrance-free formulas that pair clinically studied actives with plant extracts — for skin that feels calm, clear and quietly radiant.</p>
+<button class="replay" data-replay>Replay intro</button>
+</div>
+</section>
+
+<div class="fx" aria-hidden="true">
+<div class="halo"></div>
+<svg class="ring" viewBox="0 0 400 400">
+<defs>
+<path id="lmRingPath" d="M200,200 m-176,0 a176,176 0 1,1 352,0 a176,176 0 1,1 -352,0"></path>
+</defs>
+<text font-family="Inter Tight, sans-serif" font-size="10.5" font-weight="500" letter-spacing="4" fill="#8C897F"><textPath href="#lmRingPath" textLength="1100" lengthAdjust="spacing">CLARIFYING SERUM · NIACINAMIDE 10% · ZINC PCA 1% · GREEN TEA LEAF · 30 ML · FRAGRANCE-FREE ·</textPath></text>
+</svg>
+</div>
+
+<div class="splash" aria-hidden="true">
+<div class="half l"></div>
+<div class="half r"></div>
+</div>
+<div class="word serif" aria-hidden="true">Lumé</div>
+<div class="splashfoot" aria-hidden="true">
+<p>Botanical skin science</p>
+<div class="bar"><span></span></div>
+</div>
+
+<div class="center">
+<div class="b-settle">
+<div class="b-in">
+<div class="b-float">
+<svg viewBox="0 0 200 380" role="img" aria-label="Lumé Clarifying Serum in a frosted amber glass dropper bottle" style="width: 100%; height: auto; display: block; overflow: visible">
+<ellipse cx="100" cy="368" rx="80" ry="10" fill="url(#lmShadow)"></ellipse>
+<path d="M82 64 C82 22 90 6 100 6 C110 6 118 22 118 64 Z" fill="url(#lmCap)"></path>
+<rect x="64" y="58" width="72" height="52" rx="8" fill="url(#lmCap)"></rect>
+<rect x="64" y="72" width="72" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="64" y="84" width="72" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="64" y="96" width="72" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="80" y="108" width="40" height="22" fill="#4F2709"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmAmber)"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmFrost)"></rect>
+<g clip-path="url(#lmClipS)">
+<rect x="28" y="168" width="144" height="200" fill="#2A1203" opacity="0.22"></rect>
+<rect x="28" y="167" width="144" height="1.5" fill="#F3C98F" opacity="0.5"></rect>
+<g class="sweep"><rect x="-70" y="110" width="56" height="280" fill="url(#lmSweep)" transform="skewX(-14)"></rect></g>
+</g>
+<rect x="40" y="146" width="9" height="196" rx="4.5" fill="#FFFFFF" opacity="0.26"></rect>
+<rect x="156" y="152" width="3" height="182" rx="1.5" fill="#FFFFFF" opacity="0.16"></rect>
+<rect x="52" y="208" width="96" height="122" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="100" y="241" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="25" fill="#1C1F1A">Lumé</text>
+<rect x="88" y="251" width="24" height="0.8" fill="#1C1F1A"></rect>
+<text x="100" y="273" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">CLARIFYING</text>
+<text x="100" y="285" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">SERUM</text>
+<text x="100" y="315" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6.5" letter-spacing="1" fill="#5D5B54">NIACINAMIDE 10% · 30 ML</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tag t1"><i></i>10% Niacinamide</div>
+<div class="tag t2"><i></i>Fragrance-free</div>
+
+</div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+<div class="track serif">
+<span>Niacinamide <b>·</b></span><span>Squalane <b>·</b></span><span>Centella asiatica <b>·</b></span><span>Ceramides <b>·</b></span><span>Green tea leaf <b>·</b></span><span>Hyaluronic acid <b>·</b></span>
+<span>Niacinamide <b>·</b></span><span>Squalane <b>·</b></span><span>Centella asiatica <b>·</b></span><span>Ceramides <b>·</b></span><span>Green tea leaf <b>·</b></span><span>Hyaluronic acid <b>·</b></span>
+</div>
+</div>
+
+<div class="wrap">
+
+<section class="sec" id="ritual" aria-labelledby="ritual-h">
+<div class="sechead">
+<div>
+<p class="eyebrow">The Ritual</p>
+<h2 class="serif h2" id="ritual-h">Three steps. Nothing extra.</h2>
+</div>
+<p class="sectext">A short routine built around what skin actually needs: clean it gently, treat it precisely, then seal in moisture.</p>
+</div>
+
+<div class="grid3">
+<article class="rcard">
+<div class="rimg">
+<svg viewBox="0 0 180 400" role="img" aria-label="Lumé Gel Cleanser in a frosted green glass pump bottle">
+<ellipse cx="94" cy="390" rx="74" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="66" y="14" width="56" height="24" rx="5" fill="url(#lmCap)"></rect>
+<rect x="118" y="20" width="44" height="11" rx="4" fill="url(#lmCap)"></rect>
+<rect x="84" y="36" width="20" height="30" fill="#1A1C17"></rect>
+<rect x="54" y="62" width="80" height="44" rx="8" fill="url(#lmCap)"></rect>
+<rect x="68" y="104" width="52" height="24" fill="#1F2A19"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmGreen)"></rect>
+<rect x="20" y="126" width="148" height="256" rx="30" fill="url(#lmFrost)"></rect>
+<rect x="32" y="146" width="9" height="212" rx="4.5" fill="#FFFFFF" opacity="0.22"></rect>
+<rect x="40" y="226" width="108" height="124" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="94" y="259" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="25" fill="#1C1F1A">Lumé</text>
+<rect x="82" y="269" width="24" height="0.8" fill="#1C1F1A"></rect>
+<text x="94" y="291" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">GEL</text>
+<text x="94" y="303" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">CLEANSER</text>
+<text x="94" y="333" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6.5" letter-spacing="1" fill="#5D5B54">CENTELLA · 150 ML</text>
+</svg>
+</div>
+<div class="rbody">
+<p class="step">01 — Cleanse</p>
+<h3 class="serif rname">Gel Cleanser</h3>
+<p class="rdesc">A low-foam gel that lifts sunscreen and oil without stripping, leaving skin soft rather than tight.</p>
+<div class="acts"><span>Centella asiatica</span><span>Glycerin</span><span>pH 5.5</span></div>
+<div class="rfoot"><span class="price">$22 · 150 ml</span><button class="add" data-add="1">Add to bag</button></div>
+</div>
+</article>
+
+<article class="rcard">
+<div class="rimg">
+<svg viewBox="0 0 200 380" role="img" aria-label="Lumé Clarifying Serum in a frosted amber glass dropper bottle">
+<ellipse cx="100" cy="368" rx="80" ry="10" fill="url(#lmShadow)"></ellipse>
+<path d="M82 64 C82 22 90 6 100 6 C110 6 118 22 118 64 Z" fill="url(#lmCap)"></path>
+<rect x="64" y="58" width="72" height="52" rx="8" fill="url(#lmCap)"></rect>
+<rect x="80" y="108" width="40" height="22" fill="#4F2709"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmAmber)"></rect>
+<rect x="28" y="128" width="144" height="232" rx="30" fill="url(#lmFrost)"></rect>
+<rect x="40" y="146" width="9" height="196" rx="4.5" fill="#FFFFFF" opacity="0.26"></rect>
+<rect x="52" y="208" width="96" height="122" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="100" y="241" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="25" fill="#1C1F1A">Lumé</text>
+<rect x="88" y="251" width="24" height="0.8" fill="#1C1F1A"></rect>
+<text x="100" y="273" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">CLARIFYING</text>
+<text x="100" y="285" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#2A3324">SERUM</text>
+<text x="100" y="315" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6.5" letter-spacing="1" fill="#5D5B54">NIACINAMIDE 10% · 30 ML</text>
+</svg>
+</div>
+<div class="rbody">
+<p class="step">02 — Treat</p>
+<h3 class="serif rname">Clarifying Serum</h3>
+<p class="rdesc">A lightweight serum that targets visible pores, uneven tone and excess shine, morning and night.</p>
+<div class="acts"><span>Niacinamide 10%</span><span>Zinc PCA 1%</span><span>Green tea</span></div>
+<div class="rfoot"><span class="price">$34 · 30 ml</span><button class="add" data-add="1">Add to bag</button></div>
+</div>
+</article>
+
+<article class="rcard">
+<div class="rimg">
+<svg viewBox="0 0 240 220" role="img" aria-label="Lumé Barrier Cream in a frosted amber glass jar with an olive lid" style="width: 100%; height: auto">
+<ellipse cx="120" cy="210" rx="104" ry="9" fill="url(#lmShadow)"></ellipse>
+<rect x="38" y="16" width="164" height="56" rx="10" fill="url(#lmOlive)"></rect>
+<rect x="38" y="30" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="38" y="44" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="38" y="58" width="164" height="1" fill="#FFFFFF" opacity="0.1"></rect>
+<rect x="54" y="70" width="132" height="14" fill="#4F2709"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmAmber)"></rect>
+<rect x="22" y="82" width="196" height="122" rx="28" fill="url(#lmFrost)"></rect>
+<rect x="36" y="96" width="9" height="94" rx="4.5" fill="#FFFFFF" opacity="0.26"></rect>
+<rect x="66" y="108" width="108" height="72" rx="3" fill="#F4EFE5" opacity="0.95"></rect>
+<text x="120" y="134" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="21" fill="#1C1F1A">Lumé</text>
+<text x="120" y="152" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.4" fill="#2A3324">BARRIER CREAM</text>
+<text x="120" y="168" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="6" letter-spacing="0.8" fill="#5D5B54">CERAMIDES · 50 ML</text>
+</svg>
+</div>
+<div class="rbody">
+<p class="step">03 — Restore</p>
+<h3 class="serif rname">Barrier Cream</h3>
+<p class="rdesc">A cushiony cream that replenishes the skin barrier and locks in hydration without feeling heavy.</p>
+<div class="acts"><span>Ceramides</span><span>Squalane</span><span>Hyaluronic acid</span></div>
+<div class="rfoot"><span class="price">$38 · 50 ml</span><button class="add" data-add="1">Add to bag</button></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="promo" id="set" aria-labelledby="promo-h">
+<div class="pdisc serif" aria-hidden="true">Save<br>15%</div>
+<div>
+<p class="eyebrow">Limited offer · The Complete Ritual</p>
+<h2 class="serif h2" id="promo-h">All three steps, one considered set.</h2>
+<p class="sectext">Gel Cleanser, Clarifying Serum and Barrier Cream together for less. Use the code at checkout or add the full set below.</p>
+<div class="prow">
+<span class="code">CODE · RITUAL15</span>
+<button class="pbtn" data-add="3">Add the set — $79.90 <s>$94</s></button>
+</div>
+</div>
+<div class="trio" aria-hidden="true">
+<svg class="t-c" viewBox="0 0 180 400"><use href="#lmCleanS" width="180" height="400"></use></svg>
+<svg viewBox="0 0 200 380"><use href="#lmSerumS" width="200" height="380"></use></svg>
+<svg class="t-j" viewBox="0 0 240 220"><use href="#lmJarS" width="240" height="220"></use></svg>
+</div>
+</section>
+
+<section class="sec" id="concern" aria-labelledby="concern-h">
+<div class="sechead">
+<div>
+<p class="eyebrow">Shop by concern</p>
+<h2 class="serif h2" id="concern-h">Start with what your skin is telling you.</h2>
+</div>
+<p class="sectext">Pick the concern that sounds most like you and we'll point you to the formula to begin with.</p>
+</div>
+<div class="concern">
+<div class="ctabs" role="group" aria-label="Skin concerns">
+<div id="lm-tabs" style="display: contents"></div>
+</div>
+<div class="cpanel">
+<p class="eyebrow" data-c="name"></p>
+<h3 class="serif ctitle" data-c="title"></h3>
+<p class="sectext" style="max-width: 520px" data-c="body"></p>
+<div class="cpick">
+<div class="pimg">
+<span data-prod="serum"><svg viewBox="0 0 200 380" aria-hidden="true"><use href="#lmSerumS" width="200" height="380"></use></svg></span>
+<span data-prod="cream" hidden><svg viewBox="0 0 240 220" aria-hidden="true" style="width: 100%; height: auto"><use href="#lmJarS" width="240" height="220"></use></svg></span>
+<span data-prod="clean" hidden><svg viewBox="0 0 180 400" aria-hidden="true"><use href="#lmCleanS" width="180" height="400"></use></svg></span>
+</div>
+<div class="pmeta">
+<p class="pname">Start with: <span data-c="pname"></span></p>
+<p class="psub" data-c="pmeta"></p>
+</div>
+<button class="plus" aria-label="Add recommended product to bag" data-add="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" aria-labelledby="spot-h">
+<div class="spot">
+<div class="svis">
+<div class="disc"></div>
+<svg class="sb" viewBox="0 0 200 380" role="img" aria-label="Lumé Clarifying Serum bottle"><use href="#lmSerumS" width="200" height="380"></use></svg>
+<div class="callout co1"><b>10%</b>Niacinamide</div>
+<div class="callout co2"><b>1%</b>Zinc PCA</div>
+</div>
+<div class="stext">
+<p class="eyebrow">Ingredient spotlight</p>
+<h2 class="serif h2" id="spot-h">Niacinamide, the quiet multitasker.</h2>
+<p class="sectext" style="margin-top: 18px; max-width: 480px">Also known as vitamin B3, niacinamide is one of the most researched actives in skincare: gentle enough for daily use, effective enough to notice.</p>
+<ul class="blist">
+<li><span class="bico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg></span><div><p class="bt">Refines the look of pores</p><p class="bd">Helps regulate excess oil so pores appear smaller and skin looks smoother.</p></div></li>
+<li><span class="bico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M5 5l1.4 1.4"></path><path d="M17.6 17.6L19 19"></path><path d="M5 19l1.4-1.4"></path><path d="M17.6 6.4L19 5"></path></svg></span><div><p class="bt">Evens out tone</p><p class="bd">Helps fade the look of dark marks and dullness with consistent use.</p></div></li>
+<li><span class="bico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path></svg></span><div><p class="bt">Supports the skin barrier</p><p class="bd">Helps skin make its own ceramides, so it holds on to moisture for longer.</p></div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="sci" id="science" aria-labelledby="sci-h">
+<div>
+<p class="eyebrow">Our science</p>
+<h2 class="serif h2" id="sci-h">Every ingredient earns its place.</h2>
+<p class="sectext">We start with the active, find the concentration research supports, then build a formula around it with botanicals that soothe rather than scent.</p>
+</div>
+<div class="princ">
+<div class="pitem"><p class="pnum">01</p><h3 class="serif ptitle">Studied actives</h3><p class="pdesc">Concentrations chosen from published research, printed on every label.</p></div>
+<div class="pitem"><p class="pnum">02</p><h3 class="serif ptitle">Fragrance-free</h3><p class="pdesc">No added perfume or essential oils, so sensitive skin stays settled.</p></div>
+<div class="pitem"><p class="pnum">03</p><h3 class="serif ptitle">pH-balanced</h3><p class="pdesc">Formulated to sit close to skin's natural pH for a calmer barrier.</p></div>
+<div class="pitem"><p class="pnum">04</p><h3 class="serif ptitle">Amber glass</h3><p class="pdesc">Light-shielding glass keeps actives stable and is endlessly recyclable.</p></div>
+</div>
+</section>
+
+<section class="sec" id="routine" aria-labelledby="routine-h">
+<div class="sechead">
+<div>
+<p class="eyebrow">How to use</p>
+<h2 class="serif h2" id="routine-h">Morning and night, in under two minutes.</h2>
+</div>
+<p class="sectext">The same three formulas work day and night. Mornings simply finish with sunscreen.</p>
+</div>
+<div class="routine">
+<div class="rcol am">
+<div class="rhead"><h3 class="serif rlabel">Morning</h3><span class="rtime">AM</span></div>
+<ol class="steps">
+<li><span class="sn">01</span><div><p class="sname">Gel Cleanser</p><p class="sdesc">Massage onto damp skin, then rinse with lukewarm water.</p></div><span class="stime">30 sec</span></li>
+<li><span class="sn">02</span><div><p class="sname">Clarifying Serum</p><p class="sdesc">Press into face and neck before it fully dries.</p></div><span class="stime">3–4 drops</span></li>
+<li><span class="sn">03</span><div><p class="sname">Barrier Cream</p><p class="sdesc">A fingertip amount, smoothed outward from the centre.</p></div><span class="stime">1 dab</span></li>
+<li><span class="sn">04</span><div><p class="sname">Sunscreen</p><p class="sdesc">Finish with SPF 30 or higher, every single morning.</p></div><span class="stime">Last step</span></li>
+</ol>
+</div>
+<div class="rcol pm">
+<div class="rhead"><h3 class="serif rlabel">Evening</h3><span class="rtime">PM</span></div>
+<ol class="steps">
+<li><span class="sn">01</span><div><p class="sname">Gel Cleanser</p><p class="sdesc">Cleanse twice if you wore sunscreen or makeup.</p></div><span class="stime">60 sec</span></li>
+<li><span class="sn">02</span><div><p class="sname">Clarifying Serum</p><p class="sdesc">Apply to clean skin and let it absorb for a minute.</p></div><span class="stime">3–4 drops</span></li>
+<li><span class="sn">03</span><div><p class="sname">Barrier Cream</p><p class="sdesc">Use a little more than in the morning to restore overnight.</p></div><span class="stime">2 dabs</span></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section class="sec" id="journal" aria-labelledby="journal-h">
+<div class="sechead">
+<div>
+<p class="eyebrow">The Journal</p>
+<h2 class="serif h2" id="journal-h">Notes from the lab.</h2>
+</div>
+<a class="ghost" href="#journal">Read all articles</a>
+</div>
+<div class="jgrid">
+<a class="jcard" href="#journal"><div class="jimg j1"><span class="big serif">B3</span></div><p class="jmeta">Ingredients · 5 min read</p><h3 class="serif jtitle">Niacinamide, explained without the hype</h3></a>
+<a class="jcard" href="#journal"><div class="jimg j2"><span class="big serif">pH</span></div><p class="jmeta">Science · 4 min read</p><h3 class="serif jtitle">What pH really means for your skin barrier</h3></a>
+<a class="jcard" href="#journal"><div class="jimg j3"><span class="big serif">UV</span></div><p class="jmeta">Packaging · 3 min read</p><h3 class="serif jtitle">Why every Lumé formula lives in amber glass</h3></a>
+</div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-h">
+<div class="faqwrap">
+<div>
+<p class="eyebrow">FAQ</p>
+<h2 class="serif h2" id="faq-h">Questions, answered.</h2>
+<p class="sectext" style="margin-top: 18px">Can't find what you need? Write to us at [SUPPORT EMAIL] and a real person will reply.</p>
+</div>
+<div>
+<div id="lm-faq"></div>
+</div>
+</div>
+</section>
+
+<section class="cta" id="join" aria-labelledby="join-h">
+<p class="eyebrow">Join Lumé</p>
+<h2 class="serif h2" id="join-h">Begin with one bottle.</h2>
+<p class="sectext">Get first access to new formulas and a routine guide matched to your skin type.</p>
+<form class="form">
+<label for="lm-email" class="sr">Email address</label>
+<input id="lm-email" type="email" placeholder="Your email address">
+<button type="button">Subscribe</button>
+</form>
+</section>
+
+<footer>
+<div class="bigfoot">
+<div class="fbrand">
+<a href="#" class="serif" style="font-size: 30px; color: #1C1F1A">Lumé</a>
+<p>Botanical skincare, formulated with measured actives and housed in amber glass.</p>
+</div>
+<div class="fcol">
+<h3>Shop</h3>
+<ul>
+<li><a href="#ritual">Gel Cleanser</a></li>
+<li><a href="#ritual">Clarifying Serum</a></li>
+<li><a href="#ritual">Barrier Cream</a></li>
+<li><a href="#set">The Complete Ritual</a></li>
+</ul>
+</div>
+<div class="fcol">
+<h3>Learn</h3>
+<ul>
+<li><a href="#science">Our science</a></li>
+<li><a href="#routine">How to use</a></li>
+<li><a href="#journal">Journal</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</div>
+<div class="fcol">
+<h3>Help</h3>
+<ul>
+<li><a href="#faq">Shipping</a></li>
+<li><a href="#faq">Returns</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Instagram</a></li>
+</ul>
+</div>
+</div>
+<p class="flogo serif" aria-hidden="true">Lumé</p>
+<div class="foot">
+<span>© 2026 Lumé. All rights reserved.</span>
+<nav aria-label="Legal">
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</div>
+<script>
+var LM_CONCERNS = [
+  { name: 'Oily & congested', sub: 'Shine, visible pores', title: 'Balance oil without stripping.', body: 'Niacinamide and zinc help regulate excess oil and refine the look of pores, while a gentle cleanser keeps skin from overcompensating.', pname: 'Clarifying Serum', pmeta: 'Niacinamide 10% · $34', prod: 'serum' },
+  { name: 'Dull & uneven', sub: 'Dark marks, flat tone', title: 'Bring back an even glow.', body: 'Daily niacinamide helps fade the look of dark marks and lift dullness. Pair it with morning sunscreen so the progress sticks.', pname: 'Clarifying Serum', pmeta: 'Niacinamide 10% · $34', prod: 'serum' },
+  { name: 'Dry & tight', sub: 'Flaking, rough texture', title: 'Replenish, then lock it in.', body: 'Ceramides and squalane restore what dry skin is missing, while hyaluronic acid draws water in and keeps it there.', pname: 'Barrier Cream', pmeta: 'Ceramides · $38', prod: 'cream' },
+  { name: 'Sensitive & reactive', sub: 'Redness, stinging', title: 'Calm first, treat second.', body: 'Start with a low-foam, fragrance-free cleanse built around centella, then introduce actives slowly once skin feels settled.', pname: 'Gel Cleanser', pmeta: 'Centella · $22', prod: 'clean' }
+];
+var LM_FAQS = [
+  { q: 'Is Lumé suitable for sensitive skin?', a: 'Every formula is fragrance-free and pH-balanced. If your skin is reactive, patch test on your inner arm for 24 hours and introduce one product at a time.' },
+  { q: 'Can I use niacinamide with vitamin C or retinol?', a: 'Generally, yes. Introduce one new active at a time, and if you notice irritation, use the serum in the morning and your other active at night.' },
+  { q: 'How long does one bottle last?', a: 'Used morning and night at 3–4 drops, the 30 ml Clarifying Serum lasts roughly two months.' },
+  { q: 'Where do you ship?', a: 'We currently ship to [SHIPPING REGIONS]. Orders over $60 ship free.' },
+  { q: 'What is your return policy?', a: 'Unopened products can be returned within [RETURN WINDOW] days of delivery for a full refund.' }
+];
+(function(){
+  var bag=0, concern=0, faq=0;
+  function $(s,r){return (r||document).querySelector(s)}
+  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+  // bag
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-add]');
+    if(a){bag+=+a.getAttribute('data-add');$$('[data-badge]').forEach(function(b){b.textContent=bag;b.hidden=false});}
+    if(e.target.closest('[data-menu]')) setMenu(true);
+    if(e.target.closest('[data-close]')) setMenu(false);
+    if(e.target.closest('[data-replay]')) replay();
+  });
+  // menu
+  var menu=$('#lm-menu');
+  function setMenu(o){menu.hidden=!o;document.body.style.overflow=o?'hidden':'';$$('[data-menu]').forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false')});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)setMenu(false)});
+  // replay: clone stage to restart CSS animations
+  function replay(){var s=$('#lm-stage');var c=s.cloneNode(true);s.parentNode.replaceChild(c,s);}
+  // concerns
+  var tabs=$('#lm-tabs');
+  function renderConcern(){
+    tabs.innerHTML=LM_CONCERNS.map(function(c,i){var on=i===concern;return '<button class="ctab'+(on?' on':'')+'" aria-pressed="'+on+'" data-i="'+i+'"><span class="cn">'+esc(c.name)+'</span><span class="cs">'+esc(c.sub)+'</span></button>'}).join('');
+    var c=LM_CONCERNS[concern];
+    $$('[data-c]').forEach(function(el){el.textContent=c[el.getAttribute('data-c')]});
+    $$('[data-prod]').forEach(function(el){el.hidden=el.getAttribute('data-prod')!==c.prod});
+  }
+  tabs.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(b){concern=+b.getAttribute('data-i');renderConcern();}});
+  // faq
+  var fq=$('#lm-faq');
+  function renderFaq(){
+    fq.innerHTML=LM_FAQS.map(function(f,i){var o=i===faq;return '<div class="faq"><button class="fq" aria-expanded="'+o+'" data-f="'+i+'"><span>'+esc(f.q)+'</span><span class="fi" aria-hidden="true">'+(o?'−':'+')+'</span></button>'+(o?'<p class="fa">'+esc(f.a)+'</p>':'')+'</div>'}).join('');
+  }
+  fq.addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(b){var i=+b.getAttribute('data-f');faq=faq===i?-1:i;renderFaq();}});
+  renderConcern();renderFaq();
+})();
+</script>
+</body>
+</html>
