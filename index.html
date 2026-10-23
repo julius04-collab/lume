@@ -239,13 +239,13 @@ a:hover { color: #3E4A33; }
 
 /* ---------- SPOTLIGHT ---------- */
 .spot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.svis { position: relative; background: #DCDFCF; border-radius: 28px; min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.svis .disc { position: absolute; width: min(56%, 300px); aspect-ratio: 1; border-radius: 50%; background: #E8EADE; }
-.svis .sb { position: relative; width: 150px; height: 285px; flex: none; overflow: visible; }
-.callout { position: absolute; background: #FBFAF7; border-radius: 14px; padding: 12px 16px; font-size: 13px; color: #2A3324; box-shadow: 0 8px 24px rgba(42, 51, 36, 0.10); }
+.svis { position: relative; background: #DCDFCF; border-radius: 28px; min-height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; container-type: inline-size; }
+.svis .disc { position: absolute; width: calc(2 * min(40cqw, 230px)); height: calc(2 * min(40cqw, 230px)); border-radius: 50%; background: #E8EADE; }
+.svis .sb { position: relative; z-index: 1; width: min(40cqw, 230px); height: calc(1.9 * min(40cqw, 230px)); flex: none; overflow: visible; }
+.callout { position: absolute; z-index: 2; background: #FBFAF7; border-radius: 14px; padding: 12px 16px; font-size: 13px; color: #2A3324; box-shadow: 0 8px 24px rgba(42, 51, 36, 0.10); }
 .callout b { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; display: block; line-height: 1; margin-bottom: 2px; }
-.co1 { top: 16%; left: 8%; }
-.co2 { bottom: 18%; right: 8%; }
+.co1 { top: calc(50% - 0.7 * min(40cqw, 230px) - 34px); left: 6%; }
+.co2 { top: calc(50% + 0.35 * min(40cqw, 230px)); right: 6%; }
 .stext { background: #FBFAF7; border-radius: 28px; padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; }
 .blist { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; }
 .blist li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-top: 1px solid #E3DED3; }
@@ -358,8 +358,7 @@ a:hover { color: #3E4A33; }
   .pdisc { width: 80px; height: 80px; font-size: 17px; top: 16px; right: 16px; }
   .ctab .cn { font-size: 24px; }
   .cpanel { min-height: 0; }
-  .svis { min-height: 340px; }
-  .svis .sb { width: 120px; height: 228px; }
+  .svis { min-height: 400px; }
   .faqwrap { gap: 24px; }
   .jimg { height: 220px; }
   .bigfoot { grid-template-columns: repeat(2, minmax(0, 1fr)); }
