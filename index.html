@@ -370,7 +370,7 @@ a:hover { color: #3E4A33; }
 .an-buy { display: flex; align-items: center; gap: 16px; padding: 8px 8px 8px 20px; border-radius: 999px; background: rgba(244, 239, 229, 0.08); border: 1px solid rgba(244, 239, 229, 0.16); }
 .an-buy p { margin: 0; font-size: 14px; font-weight: 600; color: #F4EFE5; }
 .an-buy p span { margin-left: 8px; font-weight: 400; color: #B9B39F; }
-.an-buy .add { background: #F4EFE5; color: #1C1F1A; }
+.an-buy .add { background: #F4EFE5; color: #1C1F1A; white-space: nowrap; }
 .an-buy .add:hover { background: #FFFFFF; }
 @keyframes anBg {
   from { transform: translateX(4%); }
@@ -438,6 +438,11 @@ a:hover { color: #3E4A33; }
   0%, 86% { opacity: 0; transform: translateY(24px); }
   92%, 100% { opacity: 1; transform: translateY(0px); }
 }
+@keyframes anChipM {
+  0%, 60% { opacity: 0; transform: translate(-50%, -50%) translate(0px, 0px) scale(.3); }
+  72%, 82% { opacity: 1; transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(1); }
+  90%, 100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(.9); }
+}
 @keyframes anBar {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
@@ -476,7 +481,7 @@ a:hover { color: #3E4A33; }
   .an-text { display: none; }
   .an-bottle, .an-glow, .an-chip { top: 60%; }
   .an-bottle { height: min(42vh, 380px); }
-  .an-chip { gap: 8px; padding: 8px 12px 8px 10px; border-radius: 14px; }
+  .an-chip { gap: 8px; padding: 8px 12px 8px 10px; border-radius: 14px; animation-name: anChipM; }
   .an-chip b { font-size: 24px; }
   .an-chip span { font-size: 11px; }
   .ch1 { --x: -25vw; --y: -14vh; }
